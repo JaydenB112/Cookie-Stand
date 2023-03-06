@@ -25,6 +25,7 @@ const seattle = {
     }
 
 }
+
 const tokyo  = {
     min: 3,
     max: 24,
@@ -46,6 +47,7 @@ const tokyo  = {
     }
 
 }
+// tokyo.showit()
 const dubai = {
     min: 11,
     max: 38,
@@ -65,8 +67,8 @@ const dubai = {
         }
         return this.cookiesPerHour;   
     }
-
 }
+//dubai.showit()
 const paris = {
     min: 20,
     max: 38,
@@ -86,7 +88,6 @@ const paris = {
         }
         return this.cookiesPerHour;   
     }
-
 }
 const lima = {
     min: 2,
@@ -105,17 +106,31 @@ const lima = {
             
             this.cookiesPerHour.push(Math.ceil(this.avg * this.customersPerHour()));
         }
-        return this.cookiesPerHour;   
+        return this.cookiesPerHour;  
+    },
+    showit: function() {
+       this.getCookies(); 
+       let hoursArray = document.querySelector('.output')
+        for(let i = 0; i < this.hoursOfOperation.length; i++) { 
+            let variable = document.createElement('li');
+            variable.innerHTML = `${this.hoursOfOperation[i]}: ${this.cookiesPerHour[i]} cookies`;
+            hoursArray.append(variable);
+        }
     }
+}
+   //dubai.showit()
+  //  paris.showit()
+    
 
-}
-let hoursOpen =["6am","7am","8am","9am","10am","11am","12pm","1pm","2pm","3pm","4pm","5pm","6pm","7pm"];
-let seattleCookies =[164, 328, 385, 360, 221, 259, 164, 278, 158, 378, 322, 378, 372, 215];
-let hoursArray = document.querySelector('.output')
-for(let i = 0; i < hoursOpen.length; i++) {
-    let variable = document.createElement('li');
-    variable.innerHTML = `${hoursOpen[i]}: ${seattleCookies[i]} cookies`;
-    hoursArray.append(variable);
-}
+//let hoursOpen =["6am","7am","8am","9am","10am","11am","12pm","1pm","2pm","3pm","4pm","5pm","6pm","7pm"];
+//let seattleCookies =[164, 328, 385, 360, 221, 259, 164, 278, 158, 378, 322, 378, 372, 215];
+// let hoursArray = document.querySelector('.output')
+//for(let i = 0; i < hoursOpen.length; i++) {
+    //let variable = document.createElement('li');
+    //variable.innerHTML = `${hoursOpen[i]}: ${seattleCookies[i]} cookies`;
+   // hoursArray.append(variable);
+
+
+//}
 
 
