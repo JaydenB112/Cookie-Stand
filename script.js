@@ -197,21 +197,27 @@ function doitall(min, max, avg, Location) {
     let cookiesTable = document.querySelector('.CookieData');
     let hoursTable = document.querySelectorAll('.HoursofOpp');
     let locationTable = document.createElement('tr');
-    let locationData = document.createElement('td')
+    let locationData = document.createElement('td');
+    let sumData = document.createElement('td');
     locationData.innerHTML += this.Location
     locationTable.append(locationData);
+    object.totalNumber = function() {
+
+        let sum= 0
+        for(let i=0; i < this.cookiesPerHour.length; i++) {
+            sum += this.cookiesPerHour[i];
+        }
+        return sum;
+    }
     for (let i = 0; i< hoursOpen.length; i++) {
         let tableData = document.createElement('td')
         tableData.innerHTML += this.cookiesPerHour[i]
         cookiesTable.append(tableData);
         locationTable.append(tableData);
         // locationTable.append();
-    
     }
-    let sum= 0
-    for(let i=0; i < this.cookiesPerHour.length; i++) {
-        sum += this.cookiesPerHour[i]
-    }
+    // I need to append this function to get my totals, I can do this by creating a table data function
+    sumData.append(sum);
     cookiesTable.append(locationTable);
     }
     return object
@@ -220,6 +226,7 @@ function doitall(min, max, avg, Location) {
 let seattleF = new doitall(23,65,6.3,'Seattle')      
 seattleF.attainCookies();
 seattleF.customersPerHour();
+
 
 seattleF.tableFiller();
 
