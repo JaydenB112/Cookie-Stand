@@ -2,6 +2,16 @@
         border: 1px solid black;
     }
 
-    .header {
+    .title {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        text-align: center;
+
+    }
+
+    .header { 
+        display: flex;
+        flex-direction: row; 
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        justify-content: space-around;
         
     }
