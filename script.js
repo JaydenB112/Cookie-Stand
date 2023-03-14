@@ -217,7 +217,7 @@ function doitall(min, max, avg, Location) {
         let tableData = document.createElement('td')
         tableData.innerHTML += this.cookiesPerHour[i]
         cookiesTable.append(tableData);
-        locationTable.append(tableData);
+        locationTable.append(tableData);0
         // locationTable.append();
     }
     // I need to append this function to get my totals, I can do this by creating a table data function
