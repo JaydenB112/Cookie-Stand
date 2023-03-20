@@ -5,6 +5,7 @@
     .title {
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         text-align: center;
+        color: #353643;
 
     }
 
@@ -13,5 +14,7 @@
         flex-direction: row; 
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         justify-content: space-around;
-        
+        color: #353643;
+        background-color: salmon;
+        border: 1px solid black;
     }
