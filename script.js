@@ -259,6 +259,8 @@ limaF.customersPerHour();
 
  limaF.tableFiller();
 
+
+
  let submit = function (e) {
     e.preventDefault()
     let userInput = document.getElementById("location")
@@ -276,12 +278,13 @@ limaF.customersPerHour();
 
 
     //console.log(userInputValue, "this is the user input")
-    let userNewLocation = cookieStandLocation(minInputValue, maxInputValue, avgInputValue, userInputValue)
-    locations.push(userNewLocation)
+    let userNewLocation = doitall(minInputValue, maxInputValue, avgInputValue, userInputValue)
+    locationTable.append(userNewLocation)
+    
     //console.log(userNewLocation, "this is the new location")
     userNewLocation.attainCookies();
     userNewLocation.customersPerHour();
-    userNewLocation.doitall();
+    userNewLocation.tableFiller();
 
     totalNumber();
  }
