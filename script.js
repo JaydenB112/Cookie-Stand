@@ -258,3 +258,33 @@ limaF.attainCookies();
 limaF.customersPerHour();
 
  limaF.tableFiller();
+
+ let submit = function (e) {
+    e.preventDefault()
+    let userInput = document.getElementById("location")
+    let userInputValue = userInput.value
+
+    let minInput = document.getElementById("minimum")
+    let minInputValue = parseInt(minInput.value)
+
+    let maxInput = document.getElementById("maximum")
+    let maxInputValue = parseInt(maxInput.value)
+
+    let avgInput = document.getElementById("avg")
+    let avgInputValue = parseInt(avgInput.value)
+
+
+
+    //console.log(userInputValue, "this is the user input")
+    let userNewLocation = cookieStandLocation(minInputValue, maxInputValue, avgInputValue, userInputValue)
+    locations.push(userNewLocation)
+    //console.log(userNewLocation, "this is the new location")
+    userNewLocation.attainCookies();
+    userNewLocation.customersPerHour();
+    userNewLocation.doitall();
+
+    totalNumber();
+ }
+
+ let submitButton = document.getElementById("newLocation");
+submitButton.addEventListener("click", submit);
